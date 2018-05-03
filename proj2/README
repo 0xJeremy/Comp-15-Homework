@@ -1,0 +1,26 @@
+Jeremy Kanovsky
+Comp 15
+Project 2
+
+Purpose:
+The purpose of this program is to emulate the linux "grep" command in C++. This was done using several data structures to index all the subdirectories in a given directory and to read the files contained in them.
+
+Acknowledgements:
+In this project stackoverflow was used numerous times, as well as C++ library documentation. All the code written is original, with the exception of the LinkedList class which was taken from Homework 5 and modified to better suit this project. Additionally the NodeType struct was taken from Homework 5 to ensure the LinkedList class runs correctly.
+
+Files Provided:
+LinkedList: This class is a standard LinkedList based on the NodeType struct. This class is taken from Homework 5 and modified for the purpose of this project. It is used in the HashTable class.
+NodeType: This is a struct used to help run the LinkedList..
+FSTree: This class was given in the assignment and modified slightly to better traverse through all the subdirectories and files. It uses the DirNode object.
+DirNode: This class was given in the starter code and not modified.
+HashTable: This class was written from scratch. It uses a built in C++ hash function to create an array of LinkedLists, each one containing a Word object.
+Word: This object class holds the information about individual words in the files in the given directory, the line they came from, the file path, and the rest of the line along with the given word.
+
+Outline of Data Structures:
+In this project, the HashTable is an array of LinkedLists. The LinkedLists are built on the NodeType struct. The LinkedLists contain Word objects. The directory and subdirectories are index and traversed by FSTree. FSTree is built using the DirNode object.
+
+Testing:
+Each portion of this code was tested individually in a controlled program to ensure it was working as expected before adding it to the final product. From there, each class was added individually and tested fully before continueing with the project. If an individual portion was not working correctly and as expected it was fixed before moving on to another section. Several unused print functions can be found as member functions to classes; these are left over from the debugging process.
+
+RUNTIME:
+When main is called, the argument passed in command line is the directory of files which is then indexed along with all the .txt files it contains. Every word is stored in a HashTable. When a query is made from the user, the HashTable is searched to check if the word is in the table. If so, the file path, line number, and entire line is printed out in standard out.

@@ -1,0 +1,7 @@
+Jeremy Kanovsky
+Comp 15
+Project 1
+
+The data structures used in this project are the queue data structure, the BinaryTree structure, and the BinarySearchTree structure. The algorithms used are recursing to sift through the BinaryTree and BinarySearchTree. Wrapper functions were used to reach all branches of the trees, or to selectively reach parts of the tree and return the necessary information.
+
+The driver is the survivor-driver.cpp file which implements the BinaryTree and BinarySearchTree structures, and makes use of the Survivor class which is used to populate the trees with Survivor objects. The BinarySearchTree class is a child class of the BinaryTree class.
